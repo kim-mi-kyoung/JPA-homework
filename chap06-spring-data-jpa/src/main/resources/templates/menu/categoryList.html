@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>category list</title>
+</head>
+<body>
+<h1>상위 코드 [[${param.refCategoryCode}]]에 해당하는 카테고리 목록</h1>
+<table>
+  <tr>
+    <th>카테고리코드</th>
+    <th>카테고리이름</th>
+  </tr>
+  <tr th:each="category : ${categoryList}">
+    <td th:text="${category.categoryCode}"></td>
+    <td th:text="${category.getCategoryName()}"></td>
+  </tr>
+</table>
+</body>
+</html>
